@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background-image: linear-gradient(to top right, #ff0098 0%, #f0f 100%); */
+        background-image: linear-gradient(blue, red);
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+        height: 100vh;
+      }
+      .container {
+        position: absolute;
+        bottom: 1%;
+        /* margin-top: 10px; */
+      }
+      input {
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        border-color: white;
+
+        /* padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 40px; */
+      }
+      button {
+        margin-top: 15px;
+        display: block;
+        border-radius: 100%;
+        border-color: antiquewhite;
+        padding: 100px;
+        background: red;
+        box-shadow: 2px 4px 3px rgb(179, 245, 235);
+      }
+      h1 {
+        text-align: center;
+        color: rgb(54, 47, 47);
+        font-style: italic;
+      }
+      #deca1 {
+        width: 400;
+        height: 30vh;
+        /* background-color: cadetblue; */
+        text-align: center;
+        padding-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Magic</h1>
+
+      <input id="needed" placeholder="Type something..." />
+
+      <button id="hello" onclick="reverse()">reverse</button>
+      <p id="deca"></p>
+      <div id="deca1"></div>
+    </div>
+    <script>
+      function reverse() {
+        b = document.getElementById("needed").value;
+        a = b.split("").reverse().join("");
+        document.getElementById("deca1").innerHTML = a;
+      }
+    </script>
+  </body>
+</html>

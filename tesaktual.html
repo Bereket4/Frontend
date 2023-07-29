@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="even" />
+    <button onclick="findEvenNumbers()">click</button>
+    <p id="show"></p>
+    <p id="noshow"></p>
+    <p id="evendescription"></p>
+    <p id="odddescription"></p>
+    <script>
+      even = [];
+      odd = [];
+      function findEvenNumbers() {
+        var a = Number(document.getElementById("even").value);
+
+        if (a % 2 == 0) {
+          even.push(a);
+          for (i in even) {
+            document.getElementById("show").innerHTML = "EvenLists :" + even;
+            // document.getElementById("evendescription").innerHTML = "even";
+          }
+        }
+
+        if (a % 2 !== 0) {
+          odd.push(a);
+          for (e in odd) {
+            document.getElementById("noshow").innerHTML = "OddLists :" + odd;
+          }
+        }
+        // const b = a.filter(function (n) {
+        //   return n % 2 == 0;
+        // });
+      }
+      //   array = [];
+      //   function findEvenNumbers() {
+      //     var a = Number(document.getElementById("even").value);
+      //     array.push(a);
+      //     // var value = "";
+      //     for (i = 0; i < array.length; i++) {
+      //       value += arrray[i];
+      //     }
+      //     document.getElementById("show").innerHTML = value;
+      //   }
+    </script>
+  </body>
+</html>

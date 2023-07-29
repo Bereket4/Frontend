@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: wheat;
+        display: block;
+        text-align: center;
+      }
+      input {
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 50px;
+        border-color: white;
+        margin-bottom: 10px;
+      }
+      button {
+        margin-top: 15px;
+        display: block;
+        border-radius: 100%;
+        border-color: antiquewhite;
+        padding: 100px;
+        background: red;
+        box-shadow: 2px 4px 3px rgb(179, 245, 235);
+        margin-left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <u>Even/Odd detector</u>
+    </h1>
+    <input type="text" placeholder="Type a number" id="num" /><br />
+    <button onclick="Detector()">click</button>
+    <p id="show"></p>
+    <p id="g"></p>
+
+    <script>
+      function Detector() {
+        a = Number(document.getElementById("num").value);
+        b = a % 2 == 0 ? "Even" : "Odd";
+
+        document.getElementById("show").innerHTML = b;
+      }
+    </script>
+  </body>
+</html>
